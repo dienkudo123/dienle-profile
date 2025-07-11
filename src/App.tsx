@@ -1,25 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./styles/main.scss";
+import About from "./components/about";
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>Diện Lê — Portfolio</h1>
       </header>
-    </div>
+      <main>
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+      <footer>
+        © {new Date().getFullYear()} Diện Lê. All rights reserved.
+      </footer>
+    </>
   );
 }
 
