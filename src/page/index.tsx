@@ -1,25 +1,17 @@
-import About from "../components/about";
-// import Skills from "../components/Skills";
-// import Projects from "../components/Projects";
-// import Contact from "../components/Contact";
+import About from "./about";
+import Experience from "./experience";
+import Projects from "./projects";
+import Contact from "./contact";
 
 const HomePage = () => {
-  return (
-    <div className="home-page">
-      <header>
-        <h1>Diện Lê — Portfolio</h1>
-      </header>
-      <main>
-        <About />
-        {/* <Skills />
-        <Projects />
-        <Contact /> */}
-      </main>
-      <footer>
-        © {new Date().getFullYear()} Diện Lê. All rights reserved.
-      </footer>
-    </div>
-  );
+    return (
+        <>
+            <section id="about" data-aos="fade-up"><About /></section>
+            <section id="exp" data-aos="fade-up"><Experience /></section>
+            <section id="projects" data-aos="fade-up"><Projects /></section>
+            <section id="contact" data-aos="fade-up"><Contact /></section>
+        </>
+    );
 };
 
 export default HomePage;

@@ -1,0 +1,91 @@
+.projects-section {
+  padding: 80px 40px;
+  color: white;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    position: relative;
+  }
+
+  .project-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      z-index: 10;
+      transform: scale(1.03); // phóng nhẹ
+      width: 100%; // chiếm full chiều rộng cha
+    }
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 16px;
+
+      h3 {
+        margin: 0 0 10px;
+        font-size: 1.2rem;
+        color: #22d3ee;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 12px;
+        line-height: 1.5;
+      }
+
+      .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 12px;
+
+        span {
+          background: #22d3ee;
+          color: #000;
+          font-weight: 600;
+          font-size: 0.8rem;
+          padding: 4px 8px;
+          border-radius: 8px;
+        }
+      }
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+        font-weight: 500;
+
+        &:hover {
+          color: #22d3ee;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 20px;
+
+    .project-card {
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}

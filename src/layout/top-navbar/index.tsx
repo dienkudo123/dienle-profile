@@ -3,14 +3,12 @@ import "./index.scss"
 const TopNavbar = () => {
   return (
     <nav className="top-navbar">
-      <div className="navbar-left">
-      </div>
-      <ul className="navbar-right">
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#skills">Kỹ năng</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#contact">Liên hệ</a></li>
-      </ul>
+
+        <a href="#about">GIỚI THIỆU</a>
+        <a href="#exp">KINH NGHIỆM</a>
+        <a href="#projects">DỰ ÁN</a>
+        <a href="#contact">LIÊN HỆ</a>
+
     </nav>
   );
 };
