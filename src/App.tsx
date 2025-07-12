@@ -9,13 +9,9 @@ import HomePage from "./page";
 
 function App() {
     useEffect(() => {
-
-
         window.scrollTo(0, 0);
-
         AOS.init({
             duration: 1000,
-
         });
     }, []);
 
