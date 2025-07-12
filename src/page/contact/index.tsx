@@ -23,7 +23,7 @@ const Contact = () => {
             <div className="contact-links">
                 <a href="mailto:leducdientin92018@gmail.com">leducdientin92018@gmail.com</a>
                 <a href="https://github.com/dienkudo123" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/yourlinkedin/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://www.facebook.com/dienkudo123/" target="_blank" rel="noopener noreferrer">Facebook</a>
             </div>
         </section>
     );

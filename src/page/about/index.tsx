@@ -11,31 +11,38 @@ const About = () => {
                     <div className="about-text">
                         <h2>HALLOOO!</h2>
                         <p>
-                            Mình là <strong>Diện Lê</strong>, một <strong>Fullstack Developer</strong> đam mê với công
-                            nghệ và thiết kế website hiện đại.
+                            Mình là <strong>Diện Lê</strong>, một <strong>Fullstack Developer</strong> với niềm đam mê
+                            lớn dành cho công nghệ
+                            và thiết kế website hiện đại.
                             <br/>
-                            Mình đến từ <strong>ngành Khoa học Máy tính</strong>, <strong>Đại học Bách Khoa Hà
-                            Nội</strong>, nơi mình được đào tạo bài bản về lập trình, cấu trúc dữ liệu, thuật toán và
-                            các hệ thống phần mềm.
+                            Xuất thân từ <strong>ngành Khoa học Máy tính</strong>, <strong>Đại học Bách Khoa Hà
+                            Nội</strong>, mình đã được đào tạo bài bản
+                            về lập trình, cấu trúc dữ liệu, thuật toán và xây dựng các hệ thống phần mềm.
                             <br/>
-                            Kinh nghiệm với: <span className="highlight">React</span>, <span
-                            className="highlight">Node.js</span>, <span className="highlight">Golang</span>, <span
-                            className="highlight">SvelteKit</span>.
+                            Có kinh nghiệm làm việc với: <span className="highlight">React</span>, <span
+                            className="highlight">Node.js</span>,
+                            <span className="highlight">Golang</span>, <span
+                            className="highlight">SvelteKit</span>, <span className="highlight">NestJS</span>...
                             <br/><br/>
-                            Mục tiêu: Trở thành một <strong>nhà phát triển phần mềm blockchain</strong>, xây dựng các
-                            hệ thống phân tán, bảo mật và minh bạch ứng dụng trong thực tiễn.
+                            Mục tiêu của mình là trở thành một <strong>nhà phát triển phần mềm blockchain</strong>, xây
+                            dựng các hệ thống phân tán,
+                            bảo mật và minh bạch phục vụ các bài toán thực tế.
+                            <br/><br/>
+                            Nếu bạn có nhu cầu xây dựng website hoặc các dự án web nhỏ, mình cũng <strong>nhận làm
+                            freelance</strong> nhé! :3
                         </p>
+
                     </div>
 
 
                     <div className="about-avatar">
                         <img
-                            src="/heart-icon.webp"
+                            src={`${process.env.PUBLIC_URL}/heart-icon.webp`}
                             alt="Heart"
                             className="heart-icon"
                         />
                         <img
-                            src="/avatar-anh-meo-cute-3.jpg"
+                            src={`${process.env.PUBLIC_URL}/avatar-anh-meo-cute-3.jpg`}
                             alt="Ảnh Diện Lê"
                             onClick={() => setShowPopup(true)}
                         />
@@ -46,9 +53,9 @@ const About = () => {
 
             {showPopup && (
                 <div className="popup-overlay" onClick={() => setShowPopup(false)}>
-                <div className="popup-image-wrapper">
+                    <div className="popup-image-wrapper">
                         <img
-                            src="/avatar-anh-meo-cute-3.jpg"
+                            src={`${process.env.PUBLIC_URL}/avatar-anh-meo-cute-3.jpg`}
                             alt="Phóng to ảnh Diện Lê"
                         />
                     </div>

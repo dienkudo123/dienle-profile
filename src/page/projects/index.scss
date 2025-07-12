@@ -1,7 +1,7 @@
 .projects-section {
   padding: 80px 40px;
   color: white;
-
+  margin-top: 60px;
   h2 {
     font-size: 2rem;
     text-align: center;
@@ -10,9 +10,8 @@
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, 1fr); // 2 card trên 1 hàng
     gap: 32px;
-    position: relative;
   }
 
   .project-card {
@@ -23,26 +22,21 @@
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
     position: relative;
     cursor: pointer;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 
     &:hover {
-      z-index: 10;
-      transform: scale(1.03); // phóng nhẹ
-      width: 100%; // chiếm full chiều rộng cha
-    }
-
-    img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
+      transform: scale(1.03);
+      z-index: 2;
     }
 
     .project-info {
-      padding: 16px;
-
       h3 {
         margin: 0 0 10px;
         font-size: 1.2rem;
-        color: #22d3ee;
+        color: #f4a950;
       }
 
       p {
@@ -58,33 +52,57 @@
         margin-bottom: 12px;
 
         span {
-          background: #22d3ee;
+          background: #f4a950;
           color: #000;
           font-weight: 600;
           font-size: 0.8rem;
           padding: 4px 8px;
           border-radius: 8px;
-        }
-      }
 
-      a {
-        color: #fff;
-        text-decoration: underline;
-        font-weight: 500;
-
-        &:hover {
-          color: #22d3ee;
+          &:hover {
+            background: red;
+            color: white;
+          }
         }
       }
     }
+
+    .project-images {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); // 4 ảnh nằm hàng ngang
+      gap: 8px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      transform: translateY(-10px);
+      pointer-events: none;
+
+      img {
+        width: 100%;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+    }
+
+    &:hover .project-images {
+      opacity: 1;
+      max-height: 120px;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
   }
 
-  @media (max-width: 768px) {
-    padding: 60px 20px;
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
 
     .project-card {
-      &:hover {
-        transform: scale(1.01);
+      .project-images {
+        grid-template-columns: repeat(2, 1fr); // xuống 2x2 khi mobile
+        grid-template-rows: repeat(2, 100px);
       }
     }
   }
