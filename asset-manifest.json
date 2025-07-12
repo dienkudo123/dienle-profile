@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dienle-profile/static/css/main.be0e9215.css",
-    "main.js": "/dienle-profile/static/js/main.206204a7.js",
+    "main.js": "/dienle-profile/static/js/main.6322d395.js",
     "index.html": "/dienle-profile/index.html",
     "main.be0e9215.css.map": "/dienle-profile/static/css/main.be0e9215.css.map",
-    "main.206204a7.js.map": "/dienle-profile/static/js/main.206204a7.js.map"
+    "main.6322d395.js.map": "/dienle-profile/static/js/main.6322d395.js.map"
   },
   "entrypoints": [
     "static/css/main.be0e9215.css",
-    "static/js/main.206204a7.js"
+    "static/js/main.6322d395.js"
   ]
 }
