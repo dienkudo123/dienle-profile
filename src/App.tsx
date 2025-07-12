@@ -14,6 +14,18 @@ function App() {
             duration: 1000,
         });
     }, []);
+    useEffect(() => {
+        fetch("https://view-ip-backend.onrender.com/get-ip")
+            .then(res => res.json())
+            .then(({ ip }) => {
+                fetch("https://view-ip-backend.onrender.com/log-ip", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ ip }),
+                });
+            });
+    }, []);
+
 
 
     return (
